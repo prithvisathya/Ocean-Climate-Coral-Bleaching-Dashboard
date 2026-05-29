@@ -3,7 +3,7 @@
  * Uses Vite proxy (/api -> localhost:8000) in development.
  */
 
-const BASE_URL = import.meta.env.VITE_API_URL || '/api'
+const BASE_URL = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '')
 
 async function fetchJSON(path, options = {}) {
   const res = await fetch(`${BASE_URL}${path}`, {
