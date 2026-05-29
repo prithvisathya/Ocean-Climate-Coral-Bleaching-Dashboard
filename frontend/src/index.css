@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-ocean-900 text-slate-100 antialiased;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(42, 138, 204, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(26, 111, 173, 0.2) 0%, transparent 50%);
+  min-height: 100vh;
+}
+
+.card {
+  @apply rounded-xl border border-ocean-700/50 bg-ocean-800/60 backdrop-blur-sm shadow-lg;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-ocean-100 mb-4;
+}
